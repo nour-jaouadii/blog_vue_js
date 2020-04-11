@@ -6,12 +6,12 @@ import store from "./store";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import './assets/scss/main.scss';
-import 'normalize.css';
+import "./assets/scss/main.scss";
+import "normalize.css";
+
+import "./filter"; // Global filter
 
 Vue.config.productionTip = false;
-
-
 
 new Vue({
   router,

@@ -3,13 +3,13 @@
     <div class="post-views"> {{views}} </div>
     <h3 class="post-title"> {{title}}</h3>
     <span class="post-date"> {{ date}}</span>
-    <p class="post-content"> {{content}}</p>
+    <p class="post-content"> {{content | shorten(100,'more') }}</p>
     <div class="row">
       <dic class="col-sm-6">
-        <span class="post-author"> {{author}} </span>
+        <span class="post-author"> {{author | reversing }} </span>
       </dic>
       <dic class="col-sm-6 text-right">
-        <class class="post-category  ">{{category}}</class>
+        <class class="post-category  ">{{category |reversing }}</class>
       </dic>
     </div>
   </div>

@@ -1,11 +1,24 @@
 <template>
     <div class="sidebar-widgets">
-        Testing Sidebar
+        {{title | uppercase}}
     </div>
 </template>
 
 <script> 
 export default {
-    name:'blog_sidebar'
+    data:function(){
+        return{
+           title :'testing'
+        }
+    },
+
+    name:'blog_sidebar',
+    filters: {
+        uppercase: function(v){
+            return v.toUpperCase();
+        },     //local component
+    }
+
+
 };
 </script>
