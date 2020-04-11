@@ -7,8 +7,15 @@
       <div class="row">
         <div class="col-md-8">
            <div class="posts-area">
-              <BlogPosts />
+              <BlogPosts v-for="post in posts" :key="post.id" 
+              :views="post.views" 
+              :title="post.title"
+              :date= "post.date"
+              :author='post.author'
+              :content= "post.content"
+              :category= 'post.category'
 
+              />
            </div>
         </div>
          <div class="col-md">
@@ -24,6 +31,7 @@
 <script>
 import BlogPosts from '@/components/Blog/BlogPosts.vue';
 import BlogSidebar from '@/components/Blog/BlogSidebar.vue';
+import JsonPosts from "../json/blog_posts.json"
 
 export default {
   
@@ -31,13 +39,14 @@ export default {
     
     return{
       pageName:'Blog',
-      pageDescription:'this is Help  Page'
+      pageDescription:'this is Help  Page',
+      posts:JsonPosts
      };
   },
   name: "Blog",
   components: {
     BlogPosts,
-    BlogSidebar
+    BlogSidebar,
   },
 };
 </script>
