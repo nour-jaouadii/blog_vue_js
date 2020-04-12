@@ -1,6 +1,6 @@
 <template>
   <div class="our-help">
-    <h1>{{pageName}}</h1>
+    <h1 v-format ="40">{{pageName}}</h1>
     <p> {{pageDescription}} </p>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi

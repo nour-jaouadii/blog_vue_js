@@ -11,6 +11,7 @@ import "normalize.css";
 
 import "./filter"; // Global filter
 
+import "./directives"; // Global Custom Directives 
 Vue.config.productionTip = false;
 
 new Vue({

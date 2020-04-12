@@ -1,7 +1,7 @@
 <template>
   <div class="our-blog">
 
-    <h1>{{pageName}}</h1>
+    <h1 v-format.orange ="60" >{{pageName}}</h1>
     <p> {{pageDescription}} </p>
    <div class="container">
       <div class="row">

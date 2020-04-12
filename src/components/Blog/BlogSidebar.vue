@@ -1,6 +1,6 @@
 <template>
-    <div class="sidebar-widgets">
-        {{title | uppercase}}
+    <div class="sidebar-widgets"   v-bold >
+      {{title | uppercase}}
     </div>
 </template>
 
@@ -13,12 +13,21 @@ export default {
     },
 
     name:'blog_sidebar',
+    
     filters: {
         uppercase: function(v){
             return v.toUpperCase();
-        },     //local component
+        },     //local filters
+    },
+     
+    // local directive v-bold 
+    directives: {
+      bold: {
+        bind: function(el) {
+        el.style.fontWeight='bold';
+      }     
+     }
     }
-
 
 };
 </script>
